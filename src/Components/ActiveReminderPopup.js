@@ -14,7 +14,7 @@ function ActiveReminderPopup() {
       try {
         if (!userId) return;
         
-        const res = await axios.get(`http://localhost:9866/getAllReminders/${userId}`);
+        const res = await axios.get(`https://backend-isbt.onrender.com/getAllReminders/${userId}`);
         const allReminders = res.data;
         
         const now = new Date();
