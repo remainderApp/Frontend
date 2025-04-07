@@ -14,7 +14,7 @@ function Notifications() {
   useEffect(() => {
     const checkUpcomingReminders = async () => {
       try {
-        const res = await axios.get(`http://localhost:9866/getAllReminders/${userId}`);
+        const res = await axios.get(`https://backend-isbt.onrender.com/getAllReminders/${userId}`);
         const allReminders = res.data;
         
         // Find reminders coming up in the next 15 minutes
