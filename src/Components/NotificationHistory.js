@@ -13,7 +13,7 @@ function NotificationHistory() {
   useEffect(() => {
     const fetchReminders = async () => {
       try {
-        const res = await axios.get(`http://localhost:9866/getAllReminders/${userId}`);
+        const res = await axios.get(`https://backend-isbt.onrender.com/getAllReminders/${userId}`);
         setReminders(res.data);
         setLoading(false);
       } catch (error) {
