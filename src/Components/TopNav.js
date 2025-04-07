@@ -14,7 +14,7 @@ function TopNav() {
 
   // get user Details by Id
   const getUserDetails = async () => {
-    const response = await fetch(`http://localhost:9866/user/${userId}`);
+    const response = await fetch(`https://backend-isbt.onrender.com/user/${userId}`);
     const data = await response.json();
     setUser(data);
   };
@@ -22,7 +22,7 @@ function TopNav() {
   // Get upcoming notifications count
   const checkNotifications = async () => {
     try {
-      const res = await axios.get(`http://localhost:9866/getAllReminders/${userId}`);
+      const res = await axios.get(`https://backend-isbt.onrender.com/getAllReminders/${userId}`);
       const allReminders = res.data;
       
       // Find reminders coming up today and in the future
