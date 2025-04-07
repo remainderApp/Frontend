@@ -31,7 +31,7 @@ function Login() {
     setMessage(""); // Reset message
 
     try {
-      const res = await axios.post("http://localhost:9866/signup", formData);
+      const res = await axios.post("https://backend-isbt.onrender.com/signup", formData);
       setMessage(res.data.message); // Success message
       setFormData({ name: "", email: "", password: "" }); // Clear form
     } catch (error) {
@@ -44,7 +44,7 @@ function Login() {
     setError(""); // Clear previous errors
   
     try {
-      const res = await axios.post("http://localhost:9866/login", { email, password });
+      const res = await axios.post("https://backend-isbt.onrender.com/login", { email, password });
   
       // Store user _id in localStorage
       localStorage.setItem("userId", res.data.user._id);
