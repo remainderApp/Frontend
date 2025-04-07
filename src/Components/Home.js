@@ -55,7 +55,7 @@ function Home() {
         userId:userId
       };
   
-      const response = await fetch('http://localhost:9866/addRemainder', {
+      const response = await fetch('https://backend-isbt.onrender.com/addRemainder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(reminderData),
@@ -158,7 +158,7 @@ const playText = () => {
 // Get User Remaiinders
 const getUserRemainders = async()=>{
   try {
-     let res = await axios.get(`http://localhost:9866/getRemainder/${userId}/${selectedIcon}`);
+     let res = await axios.get(`https://backend-isbt.onrender.com/getRemainder/${userId}/${selectedIcon}`);
      let data = res.data;
      setUserRemainders(data);
   } catch (error) {
